@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
         {
             GameObject addToTail = Instantiate(bodyPartPrefab, lastBodyLocations[lastBodyLocations.Count - 1], Quaternion.identity);
             addToTail.transform.parent = this.gameObject.transform;
-            
+            addToTail.name = "Body (" + playerBody.Count + ")";
 
             playerBody.Add(addToTail);
         }

@@ -416,7 +416,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
       propertyPath: m_Name
-      value: Red Body (2)
+      value: Body (2)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
@@ -491,7 +491,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
       propertyPath: m_Name
-      value: Blue Body (2)
+      value: Body (2)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
@@ -566,7 +566,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: a5ab2250bdb163c43b0710e8d90dcae6,
         type: 3}
       propertyPath: m_Name
-      value: Blue Head
+      value: Head
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: a5ab2250bdb163c43b0710e8d90dcae6,
         type: 3}
@@ -641,7 +641,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
       propertyPath: m_Name
-      value: Red Body (5)
+      value: Body (5)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
@@ -716,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
       propertyPath: m_Name
-      value: Blue Body (5)
+      value: Body (5)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
@@ -791,7 +791,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
       propertyPath: m_Name
-      value: Blue Body (3)
+      value: Body (3)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
@@ -866,7 +866,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
       propertyPath: m_Name
-      value: Blue Body (1)
+      value: Body (1)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
@@ -941,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
       propertyPath: m_Name
-      value: Red Body (3)
+      value: Body (3)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
@@ -1016,7 +1016,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
       propertyPath: m_Name
-      value: Blue Body (4)
+      value: Body (4)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: d405972ad550eed4bb8be5aa760478f9,
         type: 3}
@@ -1091,7 +1091,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
       propertyPath: m_Name
-      value: Red Body (4)
+      value: Body (4)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
@@ -1166,7 +1166,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: 86b4e7caadb2036459849b72dab60c65,
         type: 3}
       propertyPath: m_Name
-      value: Red Head
+      value: Head
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: 86b4e7caadb2036459849b72dab60c65,
         type: 3}
@@ -1241,7 +1241,7 @@ PrefabInstance:
     - target: {fileID: 2276422611010506903, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
       propertyPath: m_Name
-      value: Red Body (1)
+      value: Body (1)
       objectReference: {fileID: 0}
     - target: {fileID: 410793413208753649, guid: 62b11996a2b567f42a946ff965434f99,
         type: 3}
