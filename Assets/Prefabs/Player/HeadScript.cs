@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class HeadScript : MonoBehaviour
 {
+    PlayerScript myPlayerScript;
+    
     void Start()
     {
-        
+        myPlayerScript = GetComponentInParent<PlayerScript>();
     }
 
     void Update()
@@ -27,8 +29,20 @@ public class HeadScript : MonoBehaviour
                 break;
                 
             case "Orb":
-                Debug.Log("Hit an Orbuh");
+                if (CanPickup(other.gameObject))
+                {
+                    Debug.Log("EAT");
+                    myPlayerScript.playerBodyCount += GameMaster.Instance.orbAddAmount;
+                    Destroy(other.gameObject);
+                }
                 break;
         }
+    }
+
+    bool CanPickup(GameObject orbObject)
+    {
+        GameColor orbColor = orbObject.GetComponent<OrbScript>().orbColor;
+
+        return (orbColor == myPlayerScript.playerColor);
     }
 }

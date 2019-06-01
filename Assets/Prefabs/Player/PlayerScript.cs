@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public GameColor playerColor;
     public GameObject bodyPartPrefab;
     
     public List<GameObject> playerBody = new List<GameObject>();
@@ -11,9 +12,6 @@ public class PlayerScript : MonoBehaviour
 
     public int playerBodyCount = 6;
     public bool allowedToMove = true;
-
-
-    public Vector3 GetHeadPosition() { return playerBody[0].transform.position; }
 
     
     void Start()
