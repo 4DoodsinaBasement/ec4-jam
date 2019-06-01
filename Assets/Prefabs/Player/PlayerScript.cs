@@ -11,6 +11,10 @@ public class PlayerScript : MonoBehaviour
 
     public int playerBodyCount = 6;
     public bool allowedToMove = true;
+
+
+    public Vector3 GetHeadPosition() { return playerBody[0].transform.position; }
+
     
     void Start()
     {
@@ -22,6 +26,8 @@ public class PlayerScript : MonoBehaviour
 
     public void MovePlayer(Vector2Int moveDirection)
     {
+        ResetToGrid();
+
         if (allowedToMove)
         {
             SaveLastLocations();
@@ -29,6 +35,8 @@ public class PlayerScript : MonoBehaviour
             MoveBodyParts();
             GrowSnake();
         }
+
+        ResetToGrid();
     }
 
     void SaveLastLocations()
@@ -82,5 +90,14 @@ public class PlayerScript : MonoBehaviour
 
             playerBody.Add(addToTail);
         }
+    }
+
+    void ResetToGrid()
+    {
+        playerBody[0].transform.position = new Vector3(
+            Mathf.RoundToInt(playerBody[0].transform.position.x),
+            Mathf.RoundToInt(playerBody[0].transform.position.y), 
+            0.0f
+        );
     }
 }
