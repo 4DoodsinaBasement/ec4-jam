@@ -24,6 +24,7 @@ public class GameMaster : MonoBehaviour
     PlayerInput blueInput, redInput;
     PlayerScript blueScript, redScript;
 
+    /**/
     void Start()
     {
         blueInput = bluePlayer.GetComponent<PlayerInput>();
@@ -40,4 +41,5 @@ public class GameMaster : MonoBehaviour
         bluePosition = blueScript.GetHeadPosition();
         redPosition = redScript.GetHeadPosition();
     }
+    /**/
 }
