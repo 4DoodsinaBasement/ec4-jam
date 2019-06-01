@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum OutletType { Male, Female }
+public enum GameColor { Blue, Red }
+
 public class GameMaster : MonoBehaviour
 {
     #region Singleton
@@ -18,13 +21,11 @@ public class GameMaster : MonoBehaviour
     #endregion
 
     public GameObject bluePlayer, redPlayer;
-
-    public Vector3 bluePosition, redPosition;
+    public int orbAddAmount = 5;
 
     PlayerInput blueInput, redInput;
     PlayerScript blueScript, redScript;
 
-    /**/
     void Start()
     {
         blueInput = bluePlayer.GetComponent<PlayerInput>();
@@ -37,9 +38,5 @@ public class GameMaster : MonoBehaviour
     {
         blueScript.MovePlayer(blueInput.GetInputDirection());
         redScript.MovePlayer(redInput.GetInputDirection());
-
-        bluePosition = blueScript.GetHeadPosition();
-        redPosition = redScript.GetHeadPosition();
     }
-    /**/
 }
