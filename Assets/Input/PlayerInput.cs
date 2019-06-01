@@ -5,18 +5,18 @@ using Rewired;
 
 public enum PlayerID { Player1 = 0, Player2 = 1 }
 
-[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(PlayerScript))]
 public class PlayerInput : MonoBehaviour
 {
     public PlayerID playerID;
     Player player;
-    PlayerController playerController;
+    PlayerScript playerScript;
     Vector2Int moveDirection;
 
     void Awake()
     {
         player = ReInput.players.GetPlayer((int)playerID);
-        playerController = GetComponent<PlayerController>();
+        playerScript = GetComponent<PlayerScript>();
         moveDirection = new Vector2Int(0,1);
     }
 
@@ -45,10 +45,12 @@ public class PlayerInput : MonoBehaviour
             moveDirection.x = -1;
             moveDirection.y = 0;
         }
+
+        // playerScript.MovePlayer(moveDirection);
     }
 
     void FixedUpdate()
     {
-        playerController.MovePlayer(moveDirection);
+        playerScript.MovePlayer(moveDirection);
     }
 }
