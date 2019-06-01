@@ -257,6 +257,7 @@ MonoBehaviour:
     type: 3}
   playerBody: []
   playerBodyCount: 7
+  allowedToMove: 1
 --- !u!114 &236227488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +394,7 @@ MonoBehaviour:
     type: 3}
   playerBody: []
   playerBodyCount: 7
+  allowedToMove: 1
 --- !u!114 &348698583
 MonoBehaviour:
   m_ObjectHideFlags: 0

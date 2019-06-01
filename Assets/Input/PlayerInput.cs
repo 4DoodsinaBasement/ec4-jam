@@ -45,8 +45,6 @@ public class PlayerInput : MonoBehaviour
             moveDirection.x = -1;
             moveDirection.y = 0;
         }
-
-        // playerScript.MovePlayer(moveDirection);
     }
 
     void FixedUpdate()

@@ -16,7 +16,19 @@ public class HeadScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("We haven't completely failed at life...?");
-        Debug.Log("Collided with " + other.gameObject.name);
+        switch (other.tag)
+        {
+            case "Player Body":
+                Debug.Log("Hit a player body");
+                break;
+
+            case "Wall":
+                Debug.Log("Hit a wall");
+                break;
+                
+            case "Orb":
+                Debug.Log("Hit an Orbuh");
+                break;
+        }
     }
 }

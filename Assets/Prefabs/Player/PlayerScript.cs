@@ -8,7 +8,9 @@ public class PlayerScript : MonoBehaviour
     
     public List<GameObject> playerBody = new List<GameObject>();
     List<Vector3> lastBodyLocations = new List<Vector3>();
+
     public int playerBodyCount = 6;
+    public bool allowedToMove = true;
     
     void Start()
     {
@@ -18,17 +20,15 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    // void FixedUpdate()
-    // {
-        
-    // }
-
     public void MovePlayer(Vector2Int moveDirection)
     {
-        SaveLastLocations();
-        MoveHead(moveDirection);
-        MoveBodyParts();
-        GrowSnake();
+        if (allowedToMove)
+        {
+            SaveLastLocations();
+            MoveHead(moveDirection);
+            MoveBodyParts();
+            GrowSnake();
+        }
     }
 
     void SaveLastLocations()
@@ -43,8 +43,25 @@ public class PlayerScript : MonoBehaviour
 
     void MoveHead(Vector2Int moveDirection)
     {
-        // playerBody[0].GetComponent<Rigidbody2D>().velocity = new Vector3(moveDirection.x, moveDirection.y, 0);
-        playerBody[0].transform.Translate(new Vector3(moveDirection.x, moveDirection.y, 0));
+        if (moveDirection == new Vector2Int(0,1)) //UP
+        {
+            playerBody[0].transform.eulerAngles = new Vector3(0,0,0);
+        }
+        if (moveDirection == new Vector2Int(1,0)) //RIGHT
+        {
+            playerBody[0].transform.eulerAngles = new Vector3(0,0,-90);
+        }
+        if (moveDirection == new Vector2Int(0,-1)) //DOWN
+        {
+            playerBody[0].transform.eulerAngles = new Vector3(0,0,180);
+        }
+        if (moveDirection == new Vector2Int(-1,0)) //LEFT
+        {
+            playerBody[0].transform.eulerAngles = new Vector3(0,0,90);
+        }
+        
+        // maybe check for collision
+        playerBody[0].transform.Translate(new Vector3(moveDirection.x, moveDirection.y, 0), Space.World);
     }
 
     void MoveBodyParts()
