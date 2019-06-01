@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum OutletType { Male, Female }
 public enum GameColor { Blue, Red }
 
 public class GameMaster : MonoBehaviour

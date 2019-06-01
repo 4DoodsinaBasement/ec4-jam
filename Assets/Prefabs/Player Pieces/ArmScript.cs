@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ArmScript : MonoBehaviour
 {
+    public OutletType outletType;
+    
     // Start is called before the first frame update
     void Start()
     {
