@@ -11,17 +11,13 @@ public class PlayerInput : MonoBehaviour
     public PlayerID playerID;
     Player player;
     PlayerScript playerScript;
-    Vector2Int inputDirection;
-
-
-    public Vector2Int GetInputDirection() { return inputDirection; }
-
+    public Vector2Int inputDirection;
 
     void Awake()
     {
         player = ReInput.players.GetPlayer((int)playerID);
         playerScript = GetComponent<PlayerScript>();
-        inputDirection = new Vector2Int(0,1);
+        inputDirection = new Vector2Int(0, 1);
     }
 
     void Update()
@@ -51,9 +47,9 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-
-    // void FixedUpdate()
-    // {
-    //     playerScript.MovePlayer(inputDirection);
-    // }
+    public void ReversePlayerDirection()
+    {
+        inputDirection.x = -inputDirection.x;
+        inputDirection.y = -inputDirection.y;
+    }
 }

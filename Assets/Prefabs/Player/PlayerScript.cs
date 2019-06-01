@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    PlayerInput playerInput;
+
     public GameObject bodyPartPrefab;
-    
+
     public List<GameObject> playerBody = new List<GameObject>();
     List<Vector3> lastBodyLocations = new List<Vector3>();
 
@@ -15,9 +17,10 @@ public class PlayerScript : MonoBehaviour
 
     public Vector3 GetHeadPosition() { return playerBody[0].transform.position; }
 
-    
+
     void Start()
     {
+        playerInput = GetComponent<PlayerInput>();
         foreach (Transform child in transform)
         {
             playerBody.Add(child.gameObject);
@@ -39,10 +42,19 @@ public class PlayerScript : MonoBehaviour
         ResetToGrid();
     }
 
+    public void PlayerPlugIn()
+    {
+        playerBody[0].tag = "Player Head";
+        playerBody[playerBody.Count - 1].tag = "Active Player Head";
+        playerBody.Reverse();
+        playerInput.ReversePlayerDirection();
+        SaveLastLocations();
+    }
+
     void SaveLastLocations()
     {
         lastBodyLocations.Clear();
-        
+
         foreach (GameObject bodyPart in playerBody)
         {
             lastBodyLocations.Add(bodyPart.transform.position);
@@ -51,23 +63,23 @@ public class PlayerScript : MonoBehaviour
 
     void MoveHead(Vector2Int moveDirection)
     {
-        if (moveDirection == new Vector2Int(0,1)) //UP
+        if (moveDirection == new Vector2Int(0, 1)) //UP
         {
-            playerBody[0].transform.eulerAngles = new Vector3(0,0,0);
+            playerBody[0].transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        if (moveDirection == new Vector2Int(1,0)) //RIGHT
+        if (moveDirection == new Vector2Int(1, 0)) //RIGHT
         {
-            playerBody[0].transform.eulerAngles = new Vector3(0,0,-90);
+            playerBody[0].transform.eulerAngles = new Vector3(0, 0, -90);
         }
-        if (moveDirection == new Vector2Int(0,-1)) //DOWN
+        if (moveDirection == new Vector2Int(0, -1)) //DOWN
         {
-            playerBody[0].transform.eulerAngles = new Vector3(0,0,180);
+            playerBody[0].transform.eulerAngles = new Vector3(0, 0, 180);
         }
-        if (moveDirection == new Vector2Int(-1,0)) //LEFT
+        if (moveDirection == new Vector2Int(-1, 0)) //LEFT
         {
-            playerBody[0].transform.eulerAngles = new Vector3(0,0,90);
+            playerBody[0].transform.eulerAngles = new Vector3(0, 0, 90);
         }
-        
+
         // maybe check for collision
         playerBody[0].transform.Translate(new Vector3(moveDirection.x, moveDirection.y, 0), Space.World);
     }
@@ -76,7 +88,7 @@ public class PlayerScript : MonoBehaviour
     {
         for (int i = 1; i < playerBody.Count; i++)
         {
-            playerBody[i].transform.position = lastBodyLocations[i-1];
+            playerBody[i].transform.position = lastBodyLocations[i - 1];
         }
     }
 
@@ -84,11 +96,11 @@ public class PlayerScript : MonoBehaviour
     {
         if (playerBodyCount > playerBody.Count)
         {
-            GameObject addToTail = Instantiate(bodyPartPrefab, lastBodyLocations[lastBodyLocations.Count - 1], Quaternion.identity);
-            addToTail.transform.parent = this.gameObject.transform;
-            addToTail.name = "Body (" + playerBody.Count + ")";
+            GameObject newBodyPart = Instantiate(bodyPartPrefab, lastBodyLocations[lastBodyLocations.Count - 1], Quaternion.identity);
+            newBodyPart.transform.parent = this.gameObject.transform;
+            newBodyPart.name = "Body (" + (playerBody.Count - 1) + ")";
 
-            playerBody.Add(addToTail);
+            playerBody.Insert((playerBody.Count - 1), newBodyPart);
         }
     }
 
@@ -96,7 +108,7 @@ public class PlayerScript : MonoBehaviour
     {
         playerBody[0].transform.position = new Vector3(
             Mathf.RoundToInt(playerBody[0].transform.position.x),
-            Mathf.RoundToInt(playerBody[0].transform.position.y), 
+            Mathf.RoundToInt(playerBody[0].transform.position.y),
             0.0f
         );
     }
