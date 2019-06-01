@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ArmScript : MonoBehaviour
 {
+    public OutletType outletType;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,7 @@ public class ArmScript : MonoBehaviour
         switch (other.tag)
         {
             case "Player Head":
-                Debug.Log("Hit a player head");
-                other.GetComponentInParent<PlayerScript>().allowedToMove = false;
+                Debug.Log("Connected");
                 break;
                 
             case "Outlet":
