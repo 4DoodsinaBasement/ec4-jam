@@ -20,8 +20,10 @@ public class ArmScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        PlayerScript thisPlayerScript = this.GetComponentInParent<PlayerScript>();
+
         otherCollidedObject = null;
-        
+
         if (transform.parent.tag == "Active Player Head")
         {
             rechargeTargetTime = rechargeTime + Time.time;
@@ -30,20 +32,27 @@ public class ArmScript : MonoBehaviour
             {
                 case "Active Player Head":
                     Debug.Log("Hit a player head");
+                    PlayerScript otherPlayerScript = other.GetComponentInParent<PlayerScript>();
                     otherCollidedObject = other.gameObject;
-                    this.GetComponentInParent<PlayerScript>().allowedToMove = false;
-                    other.GetComponentInParent<PlayerScript>().allowedToMove = false;
-                    this.GetComponentInParent<PlayerScript>().PlayerPlugIn();
-                    other.GetComponentInParent<PlayerScript>().PlayerPlugIn();
+                    thisPlayerScript.allowedToMove = false;
+                    otherPlayerScript.allowedToMove = false;
+                    thisPlayerScript.PlayerPlugIn();
+                    otherPlayerScript.PlayerPlugIn();
+                    int averagebatterylife = (
+                        thisPlayerScript.currentBatteryLife +
+                        otherPlayerScript.currentBatteryLife
+                        ) / 2;
+                    thisPlayerScript.currentBatteryLife = averagebatterylife;
+                    otherPlayerScript.currentBatteryLife = averagebatterylife;
+
                     break;
 
                 case "Outlet":
                     Debug.Log(GetComponentInParent<OutletScript>().outletType);
-                    
+
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {
                         Debug.Log("Hit an outlet");
-                        PlayerScript thisPlayerScript = this.GetComponentInParent<PlayerScript>();
                         thisPlayerScript.allowedToMove = false;
                         thisPlayerScript.PlayerPlugIn();
                         thisPlayerScript.currentBatteryLife = thisPlayerScript.maxBatteryLife;
