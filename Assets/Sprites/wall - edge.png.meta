@@ -1,7 +1,109 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a66be24dbfec9e24cb5119d4bbf403af
 TextureImporter:
   internalIDToNameTable: []
+=======
+guid: 91387c137a58ebe498764aac6cb65d91
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8743635934003128325
+    second: wall - orange edge_0
+  - first:
+      213: 808778780810471372
+    second: wall - orange edge_1
+  - first:
+      213: -5850560761564681361
+    second: wall - orange edge_2
+  - first:
+      213: 6576563755079470512
+    second: wall - orange edge_3
+  - first:
+      213: 3858697682071719044
+    second: wall - orange edge_4
+  - first:
+      213: 8296016520182179486
+    second: wall - orange edge_5
+  - first:
+      213: -3366011139478577810
+    second: wall - orange edge_6
+  - first:
+      213: 8800882531883042556
+    second: wall - orange edge_7
+  - first:
+      213: 3570348464987529637
+    second: wall - orange edge_8
+  - first:
+      213: -6630743598387406780
+    second: wall - orange edge_9
+  - first:
+      213: -1053801583960073457
+    second: wall - orange edge_10
+  - first:
+      213: -6184408438207384347
+    second: wall - orange edge_11
+  - first:
+      213: 187482990382121406
+    second: wall - orange edge_12
+  - first:
+      213: -4788313387662771533
+    second: wall - orange edge_13
+  - first:
+      213: -4364783046146315183
+    second: wall - orange edge_14
+  - first:
+      213: -1386845727815528162
+    second: wall - orange edge_15
+  - first:
+      213: 480782318669091969
+    second: wall - edge_0
+  - first:
+      213: -8199984304924552864
+    second: wall - edge_1
+  - first:
+      213: -8526727530816381586
+    second: wall - edge_2
+  - first:
+      213: -300089846553510709
+    second: wall - edge_3
+  - first:
+      213: 8419688667080300023
+    second: wall - edge_4
+  - first:
+      213: 4771806734029544421
+    second: wall - edge_5
+  - first:
+      213: -5839785699843853233
+    second: wall - edge_6
+  - first:
+      213: -647318097946687290
+    second: wall - edge_7
+  - first:
+      213: -4596507937870768378
+    second: wall - edge_8
+  - first:
+      213: -7083134677455105144
+    second: wall - edge_9
+  - first:
+      213: -6301687941407255275
+    second: wall - edge_10
+  - first:
+      213: -4862404681780646766
+    second: wall - edge_11
+  - first:
+      213: -3528175099656319352
+    second: wall - edge_12
+  - first:
+      213: -5848096629966796419
+    second: wall - edge_13
+  - first:
+      213: -1030231787362751548
+    second: wall - edge_14
+  - first:
+      213: -6167223730656035301
+    second: wall - edge_15
+>>>>>>> levels
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +133,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: -1
+=======
+    filterMode: 0
+>>>>>>> levels
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +146,20 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> levels
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 100
+=======
+  spritePixelsToUnits: 32
+>>>>>>> levels
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,6 +183,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
@@ -76,6 +191,373 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 7e6457f55914c8b4cb4e80130177ad95
+=======
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wall - edge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c583ce17b73e5e44594118b1a3f75ee3
+      internalID: 480782318669091969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b11e680d377f7459c86e97edf0cd79
+      internalID: -8199984304924552864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757113e9f9f27174b8d11e108069fab5
+      internalID: -8526727530816381586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd427565d0ee974db07edf3ccbfd1f8
+      internalID: -300089846553510709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ea368e19d6f234c8c1fa6d74774f15
+      internalID: 8419688667080300023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc80942e17731a48b3b74458ef2af2b
+      internalID: 4771806734029544421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73c304111525244fb4f8838e8f2c0f8
+      internalID: -5839785699843853233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415858750265e644fa149d6eec734582
+      internalID: -647318097946687290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebedc0375f6a2704ca3f1d70168a0a10
+      internalID: -4596507937870768378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8c9a83b08b46449bbe48dfd18f13c7
+      internalID: -7083134677455105144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2a30b40df715a47b6e0d114e9c25d7
+      internalID: -6301687941407255275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee0fbe2b9cbcda4f81b038b1abd700c
+      internalID: -4862404681780646766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbc2957d10250744b0a956f446b9872
+      internalID: -3528175099656319352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eab4199e7e0c9642845d64cea76a0c4
+      internalID: -5848096629966796419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a677520b45960e44a5c941b221ef6a4
+      internalID: -1030231787362751548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c33929bef6cc640917b2eca0921c60
+      internalID: -6167223730656035301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7e5caff026a6a36409405f970b3e247f
+>>>>>>> levels
     internalID: 0
     vertices: []
     indices: 
