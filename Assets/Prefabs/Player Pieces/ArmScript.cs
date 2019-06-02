@@ -43,8 +43,10 @@ public class ArmScript : MonoBehaviour
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {
                         Debug.Log("Hit an outlet");
-                        this.GetComponentInParent<PlayerScript>().allowedToMove = false;
-                        this.GetComponentInParent<PlayerScript>().PlayerPlugIn();
+                        PlayerScript thisPlayerScript = this.GetComponentInParent<PlayerScript>();
+                        thisPlayerScript.allowedToMove = false;
+                        thisPlayerScript.PlayerPlugIn();
+                        thisPlayerScript.currentBatteryLife = thisPlayerScript.maxBatteryLife;
                     }
                     break;
             }

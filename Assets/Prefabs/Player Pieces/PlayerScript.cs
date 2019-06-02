@@ -10,8 +10,11 @@ public class PlayerScript : MonoBehaviour
     public GameObject bodyPartPrefab;
 
     public List<GameObject> playerBody = new List<GameObject>();
-    public List<Vector3> lastBodyLocations = new List<Vector3>();
-    public List<Vector3> lastBodyRotations = new List<Vector3>();
+    List<Vector3> lastBodyLocations = new List<Vector3>();
+    List<Vector3> lastBodyRotations = new List<Vector3>();
+
+    public int maxBatteryLife = 10;
+    public int currentBatteryLife;
 
     public int playerBodyCount = 6;
     public bool allowedToMove = true;
@@ -20,6 +23,8 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        currentBatteryLife = maxBatteryLife;
+        
         playerInput = GetComponent<PlayerInput>();
         foreach (Transform child in transform)
         {
@@ -29,17 +34,22 @@ public class PlayerScript : MonoBehaviour
 
     public void MovePlayer(Vector2Int moveDirection)
     {
-        ResetToGrid();
-
-        if (allowedToMove)
+        if (currentBatteryLife > 0)
         {
-            SaveLastLocations();
-            MoveHead(moveDirection);
-            MoveBodyParts();
-            GrowSnake();
-        }
+            currentBatteryLife--;
 
-        ResetToGrid();
+            ResetToGrid();
+
+            if (allowedToMove)
+            {
+                SaveLastLocations();
+                MoveHead(moveDirection);
+                MoveBodyParts();
+                GrowSnake();
+            }
+
+            ResetToGrid();
+        }
     }
 
     public void PlayerPlugIn()
