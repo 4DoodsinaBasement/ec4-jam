@@ -7,7 +7,11 @@
         {
             "name": "Unity Editor",
             "type": "unity",
+<<<<<<< HEAD
+            "path": "/d:/ec4-jam/Library/EditorInstance.json",
+=======
             "path": "/c:/Users/nate/Desktop/ec4-jam/Library/EditorInstance.json",
+>>>>>>> cab9225f59ab2063daa812b2f6b548903349ab91
             "request": "launch"
         },
         {

@@ -36,7 +36,7 @@ public class GameMaster : MonoBehaviour
 
     void FixedUpdate()
     {
-        blueScript.MovePlayer(blueInput.GetInputDirection());
-        redScript.MovePlayer(redInput.GetInputDirection());
+        blueScript.MovePlayer(blueInput.inputDirection);
+        redScript.MovePlayer(redInput.inputDirection);
     }
 }
