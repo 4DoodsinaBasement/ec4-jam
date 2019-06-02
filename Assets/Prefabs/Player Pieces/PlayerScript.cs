@@ -28,7 +28,8 @@ public class PlayerScript : MonoBehaviour
 
     public void MovePlayer(Vector2Int moveDirection)
     {
-        ResetToGrid();
+        Quaternion playerRotation = playerBody[0].transform.rotation;
+        ResetToGrid(playerRotation);
 
         if (allowedToMove)
         {
@@ -38,7 +39,7 @@ public class PlayerScript : MonoBehaviour
             GrowSnake();
         }
 
-        ResetToGrid();
+        ResetToGrid(playerRotation);
     }
 
     public void PlayerPlugIn()
@@ -103,12 +104,13 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void ResetToGrid()
+    void ResetToGrid(Quaternion rotation)
     {
         playerBody[0].transform.position = new Vector3(
             Mathf.RoundToInt(playerBody[0].transform.position.x),
             Mathf.RoundToInt(playerBody[0].transform.position.y),
             0.0f
         );
+        playerBody[0].transform.rotation = rotation;
     }
 }

@@ -12,12 +12,25 @@ public class PlayerInput : MonoBehaviour
     Player player;
     PlayerScript playerScript;
     public Vector2Int inputDirection;
+    GameColor color;
 
     void Awake()
     {
         player = ReInput.players.GetPlayer((int)playerID);
         playerScript = GetComponent<PlayerScript>();
-        inputDirection = new Vector2Int(0, 1);
+        GameColor color = playerScript.playerColor;
+        //inputDirection = new Vector2Int(0,1);
+        /**/
+        switch (color)
+        {
+            case GameColor.Blue:
+                inputDirection = new Vector2Int(1, 0);
+                break;
+            case GameColor.Red:
+                inputDirection = new Vector2Int(-1, 0);
+                break;
+        }
+        /**/
     }
 
     void Update()

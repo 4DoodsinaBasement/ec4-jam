@@ -9,6 +9,7 @@ TagManager:
   - Player Body
   - Outlet
   - Orb
+  - Active Player Head
   layers:
   - Default
   - TransparentFX
