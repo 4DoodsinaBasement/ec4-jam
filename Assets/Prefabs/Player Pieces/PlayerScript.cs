@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
             playerBody.Add(child.gameObject);
         }
     }
+    
 
     public void MovePlayer(Vector2Int moveDirection)
     {
