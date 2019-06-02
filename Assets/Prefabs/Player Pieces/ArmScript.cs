@@ -5,23 +5,25 @@ using UnityEngine;
 public class ArmScript : MonoBehaviour
 {
     public OutletType outletType;
-    
-    // Start is called before the first frame update
-    void Start()
+    public float rechargeTime;
+    public float rechargeTargetTime;
+    GameObject otherPlayer;
+
+    void FixedUpdate()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (Time.time >= rechargeTargetTime)
+        {
+            this.GetComponentInParent<PlayerScript>().allowedToMove = true;
+            otherPlayer.GetComponentInParent<PlayerScript>().allowedToMove = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (transform.parent.tag == "Active Player Head")
         {
+            rechargeTargetTime = rechargeTime + Time.time;
+            otherPlayer = other.gameObject;
             switch (other.tag)
             {
                 case "Active Player Head":
@@ -30,8 +32,7 @@ public class ArmScript : MonoBehaviour
                     other.GetComponentInParent<PlayerScript>().allowedToMove = false;
                     this.GetComponentInParent<PlayerScript>().PlayerPlugIn();
                     other.GetComponentInParent<PlayerScript>().PlayerPlugIn();
-                    this.GetComponentInParent<PlayerScript>().allowedToMove = true;
-                    other.GetComponentInParent<PlayerScript>().allowedToMove = true;
+
                     break;
 
                 case "Outlet":
