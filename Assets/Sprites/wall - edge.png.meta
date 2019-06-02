@@ -50,6 +50,54 @@ TextureImporter:
   - first:
       213: -1386845727815528162
     second: wall - orange edge_15
+  - first:
+      213: 480782318669091969
+    second: wall - edge_0
+  - first:
+      213: -8199984304924552864
+    second: wall - edge_1
+  - first:
+      213: -8526727530816381586
+    second: wall - edge_2
+  - first:
+      213: -300089846553510709
+    second: wall - edge_3
+  - first:
+      213: 8419688667080300023
+    second: wall - edge_4
+  - first:
+      213: 4771806734029544421
+    second: wall - edge_5
+  - first:
+      213: -5839785699843853233
+    second: wall - edge_6
+  - first:
+      213: -647318097946687290
+    second: wall - edge_7
+  - first:
+      213: -4596507937870768378
+    second: wall - edge_8
+  - first:
+      213: -7083134677455105144
+    second: wall - edge_9
+  - first:
+      213: -6301687941407255275
+    second: wall - edge_10
+  - first:
+      213: -4862404681780646766
+    second: wall - edge_11
+  - first:
+      213: -3528175099656319352
+    second: wall - edge_12
+  - first:
+      213: -5848096629966796419
+    second: wall - edge_13
+  - first:
+      213: -1030231787362751548
+    second: wall - edge_14
+  - first:
+      213: -6167223730656035301
+    second: wall - edge_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -143,328 +191,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall - orange edge_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 75
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cf37094ba8a0fb47a0bc56a62e1e5ed
-      internalID: -8743635934003128325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 70
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e31853c02de95314cb27e6079da6313e
-      internalID: 808778780810471372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 65
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87068538b9aad044ca67fc771128b011
-      internalID: -5850560761564681361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 60
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2532b949ae2dd504b8064820afcf8283
-      internalID: 6576563755079470512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 55
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ede02a8c16cb30944a4665a16aca55ae
-      internalID: 3858697682071719044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 50
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4479e50efb2fe75499e05fb0b1416ba3
-      internalID: 8296016520182179486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 45
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2ef60dbea968c44fa2f417e3dd19613
-      internalID: -3366011139478577810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 40
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33322553fb9c6f349ab4f20dfb407085
-      internalID: 8800882531883042556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 35
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a55ba058d1f688b4c90c48e475d11b6f
-      internalID: 3570348464987529637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 30
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13402b92655c0654d84f3a77ffc9ee2f
-      internalID: -6630743598387406780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 25
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06a75a6911f1e1b418d4595db103d8b2
-      internalID: -1053801583960073457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_11
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 20
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33da0584f1e15b64b9a411f3a93772ed
-      internalID: -6184408438207384347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 15
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13d4ff49d9306dd40ae76a82c4d6f3b3
-      internalID: 187482990382121406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_13
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 10
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75ddd7184ac9def4d938fc7e323f64d2
-      internalID: -4788313387662771533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e5b1f24a4bcf914793c94cc94dec7cf
-      internalID: -4364783046146315183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall - orange edge_15
+      name: wall - edge_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 5
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,8 +205,323 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7ef214880bcf8d44b917342f0335c18
-      internalID: -1386845727815528162
+      spriteID: c583ce17b73e5e44594118b1a3f75ee3
+      internalID: 480782318669091969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b11e680d377f7459c86e97edf0cd79
+      internalID: -8199984304924552864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757113e9f9f27174b8d11e108069fab5
+      internalID: -8526727530816381586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd427565d0ee974db07edf3ccbfd1f8
+      internalID: -300089846553510709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ea368e19d6f234c8c1fa6d74774f15
+      internalID: 8419688667080300023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc80942e17731a48b3b74458ef2af2b
+      internalID: 4771806734029544421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73c304111525244fb4f8838e8f2c0f8
+      internalID: -5839785699843853233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415858750265e644fa149d6eec734582
+      internalID: -647318097946687290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebedc0375f6a2704ca3f1d70168a0a10
+      internalID: -4596507937870768378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8c9a83b08b46449bbe48dfd18f13c7
+      internalID: -7083134677455105144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2a30b40df715a47b6e0d114e9c25d7
+      internalID: -6301687941407255275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee0fbe2b9cbcda4f81b038b1abd700c
+      internalID: -4862404681780646766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbc2957d10250744b0a956f446b9872
+      internalID: -3528175099656319352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eab4199e7e0c9642845d64cea76a0c4
+      internalID: -5848096629966796419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a677520b45960e44a5c941b221ef6a4
+      internalID: -1030231787362751548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall - edge_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c33929bef6cc640917b2eca0921c60
+      internalID: -6167223730656035301
       vertices: []
       indices: 
       edges: []
