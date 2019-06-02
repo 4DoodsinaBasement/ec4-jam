@@ -19,8 +19,8 @@ public class PlayerInput : MonoBehaviour
         player = ReInput.players.GetPlayer((int)playerID);
         playerScript = GetComponent<PlayerScript>();
         GameColor color = playerScript.playerColor;
-        //inputDirection = new Vector2Int(0,1);
-        /**/
+        inputDirection = new Vector2Int(0,1);
+        /**
         switch (color)
         {
             case GameColor.Blue:

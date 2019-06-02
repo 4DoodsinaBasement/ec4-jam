@@ -1,61 +1,55 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: dfe934578f97afc4fb39925da7640e59
-TextureImporter:
-  internalIDToNameTable: []
-=======
-guid: 703427a1ef068e546aec9b644ed39a6c
+guid: e865e0abb3c5a9a4eabe904254ca706a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9040787042805713584
-    second: wall - corner_0
+      213: 4484604277305332324
+    second: wall - orange corner2_0
   - first:
-      213: -4016416931952018888
-    second: wall - corner_1
+      213: -7879371013433238864
+    second: wall - orange corner2_1
   - first:
-      213: 2071282279625967662
-    second: wall - corner_2
+      213: -5617000979447670438
+    second: wall - orange corner2_2
   - first:
-      213: -7440484896257321184
-    second: wall - corner_3
+      213: -6606871431307024233
+    second: wall - orange corner2_3
   - first:
-      213: 3427663640945623195
-    second: wall - corner_4
+      213: 8966916254723054181
+    second: wall - orange corner2_4
   - first:
-      213: -337645400692476132
-    second: wall - corner_5
+      213: -1772764561153420940
+    second: wall - orange corner2_5
   - first:
-      213: -3993844140945195838
-    second: wall - corner_6
+      213: -779427018954892661
+    second: wall - orange corner2_6
   - first:
-      213: 2576213786747253292
-    second: wall - corner_7
+      213: -7011428249051354426
+    second: wall - orange corner2_7
   - first:
-      213: 807897589264940825
-    second: wall - corner_8
+      213: -2073862852273763130
+    second: wall - orange corner2_8
   - first:
-      213: -1017391525287098239
-    second: wall - corner_9
+      213: -4134515424463171476
+    second: wall - orange corner2_9
   - first:
-      213: -4176324979424405493
-    second: wall - corner_10
+      213: -8036595258883763360
+    second: wall - orange corner2_10
   - first:
-      213: -4137042803509225575
-    second: wall - corner_11
+      213: -415810177262959173
+    second: wall - orange corner2_11
   - first:
-      213: -1405251818818360640
-    second: wall - corner_12
+      213: -8243932632067095722
+    second: wall - orange corner2_12
   - first:
-      213: 4391208748833577986
-    second: wall - corner_13
+      213: 3359864770618159576
+    second: wall - orange corner2_13
   - first:
-      213: 1500906012938336158
-    second: wall - corner_14
+      213: -8188652743402454958
+    second: wall - orange corner2_14
   - first:
-      213: 654976134464162384
-    second: wall - corner_15
->>>>>>> levels
+      213: -4165657137363606016
+    second: wall - orange corner2_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -85,11 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: -1
-=======
     filterMode: 0
->>>>>>> levels
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -98,20 +88,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> levels
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 100
-=======
   spritePixelsToUnits: 32
->>>>>>> levels
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,15 +117,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-<<<<<<< HEAD
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: c4b4820a53d18b840864cd1ae7ae75bf
-=======
   - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -170,7 +143,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall - corner_0
+      name: wall - orange corner2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72cf37b50dc011947bd98bbf9444e1df
-      internalID: 9040787042805713584
+      spriteID: 17121be638c98ce488884b7096b5e0ce
+      internalID: 4484604277305332324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_1
+      name: wall - orange corner2_1
       rect:
         serializedVersion: 2
         x: 32
@@ -205,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b27afe59e93ab4f4d8f09a24059d2580
-      internalID: -4016416931952018888
+      spriteID: 011ad42170af3a94c9d4ef947cec33c4
+      internalID: -7879371013433238864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_2
+      name: wall - orange corner2_2
       rect:
         serializedVersion: 2
         x: 64
@@ -226,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 006eb8448f0fc744ebe331e2bb2ac898
-      internalID: 2071282279625967662
+      spriteID: 283df20cc5075494d83f9b2965a82e67
+      internalID: -5617000979447670438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_3
+      name: wall - orange corner2_3
       rect:
         serializedVersion: 2
         x: 96
@@ -247,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d8f6ea21a445c346bc5868f216b5108
-      internalID: -7440484896257321184
+      spriteID: a321cea89366e5e48ba0664fba720c72
+      internalID: -6606871431307024233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_4
+      name: wall - orange corner2_4
       rect:
         serializedVersion: 2
         x: 128
@@ -268,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d05914056685308448ae80d9f3f0d1ee
-      internalID: 3427663640945623195
+      spriteID: 176390815c7a1064aa3108244708b6aa
+      internalID: 8966916254723054181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_5
+      name: wall - orange corner2_5
       rect:
         serializedVersion: 2
         x: 160
@@ -289,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd06b22568083114396f46f35cf1c4dd
-      internalID: -337645400692476132
+      spriteID: 19e543ac4a75f9c429ae5afd69ef0aa6
+      internalID: -1772764561153420940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_6
+      name: wall - orange corner2_6
       rect:
         serializedVersion: 2
         x: 192
@@ -310,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0907af409185c2045a9a09b081891c2e
-      internalID: -3993844140945195838
+      spriteID: 4485cc7f01fc0e147be6f65d9137fb6d
+      internalID: -779427018954892661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_7
+      name: wall - orange corner2_7
       rect:
         serializedVersion: 2
         x: 224
@@ -331,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14f7cd9b344305847af1abebaa44c0a9
-      internalID: 2576213786747253292
+      spriteID: c93e938013166284ea8c44fc99eda7ca
+      internalID: -7011428249051354426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_8
+      name: wall - orange corner2_8
       rect:
         serializedVersion: 2
         x: 256
@@ -352,14 +325,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e91c78b072020f4daf55743cc28a270
-      internalID: 807897589264940825
+      spriteID: be65ebe65ce5e0348ba2787fa24c5a2e
+      internalID: -2073862852273763130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_9
+      name: wall - orange corner2_9
       rect:
         serializedVersion: 2
         x: 288
@@ -373,14 +346,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bb62461dd49a7b458f28e8433c3c415
-      internalID: -1017391525287098239
+      spriteID: 0c0221a85fb8632498c238888afb3ff9
+      internalID: -4134515424463171476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_10
+      name: wall - orange corner2_10
       rect:
         serializedVersion: 2
         x: 320
@@ -394,14 +367,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5103b06dc7b8674cae2953d3833bb08
-      internalID: -4176324979424405493
+      spriteID: 4df0eed5b4bfe4747a302f1297b1c38c
+      internalID: -8036595258883763360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_11
+      name: wall - orange corner2_11
       rect:
         serializedVersion: 2
         x: 352
@@ -415,14 +388,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f396812e3c81afe4884bc4691bd61751
-      internalID: -4137042803509225575
+      spriteID: cfb7470c97f1a0043b820d132f6fe018
+      internalID: -415810177262959173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_12
+      name: wall - orange corner2_12
       rect:
         serializedVersion: 2
         x: 384
@@ -436,14 +409,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce56ff485e50e844383af1758cebfe86
-      internalID: -1405251818818360640
+      spriteID: 5a0ab0f6caeb75a40b391297bc7b8d01
+      internalID: -8243932632067095722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_13
+      name: wall - orange corner2_13
       rect:
         serializedVersion: 2
         x: 416
@@ -457,14 +430,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c8e9cbe16f551b4bb73d09b2bf3a6bd
-      internalID: 4391208748833577986
+      spriteID: 04c9d334670c77c468366e21f2120c4c
+      internalID: 3359864770618159576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_14
+      name: wall - orange corner2_14
       rect:
         serializedVersion: 2
         x: 448
@@ -478,14 +451,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13af4cad34ebea54f804d0ee511058fb
-      internalID: 1500906012938336158
+      spriteID: 4ccbc6d5fff5b734c9e484955f58b374
+      internalID: -8188652743402454958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall - corner_15
+      name: wall - orange corner2_15
       rect:
         serializedVersion: 2
         x: 480
@@ -499,8 +472,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63990cd0c8e2cd7458088757814b323a
-      internalID: 654976134464162384
+      spriteID: 66cf201bbbfd1b54b9fc06e1e9d574ff
+      internalID: -4165657137363606016
       vertices: []
       indices: 
       edges: []
@@ -508,8 +481,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 13960cc6fecf272428d26a1b18ed21ea
->>>>>>> levels
+    spriteID: 977adade424f35c418eeb0d0a8941fa1
     internalID: 0
     vertices: []
     indices: 
