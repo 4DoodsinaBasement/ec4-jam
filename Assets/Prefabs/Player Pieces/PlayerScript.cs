@@ -10,7 +10,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject bodyPartPrefab;
 
     public List<GameObject> playerBody = new List<GameObject>();
-    List<Vector3> lastBodyLocations = new List<Vector3>();
+    public List<Vector3> lastBodyLocations = new List<Vector3>();
+    public List<Vector3> lastBodyRotations = new List<Vector3>();
 
     public int playerBodyCount = 6;
     public bool allowedToMove = true;
@@ -28,8 +29,7 @@ public class PlayerScript : MonoBehaviour
 
     public void MovePlayer(Vector2Int moveDirection)
     {
-        Quaternion playerRotation = playerBody[0].transform.rotation;
-        ResetToGrid(playerRotation);
+        ResetToGrid();
 
         if (allowedToMove)
         {
@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour
             GrowSnake();
         }
 
-        ResetToGrid(playerRotation);
+        ResetToGrid();
     }
 
     public void PlayerPlugIn()
@@ -54,10 +54,12 @@ public class PlayerScript : MonoBehaviour
     void SaveLastLocations()
     {
         lastBodyLocations.Clear();
+        lastBodyRotations.Clear();
 
         foreach (GameObject bodyPart in playerBody)
         {
             lastBodyLocations.Add(bodyPart.transform.position);
+            lastBodyRotations.Add(bodyPart.transform.eulerAngles);
         }
     }
 
@@ -89,6 +91,18 @@ public class PlayerScript : MonoBehaviour
         for (int i = 1; i < playerBody.Count; i++)
         {
             playerBody[i].transform.position = lastBodyLocations[i - 1];
+            if (i != playerBody.Count - 1)
+            {
+                playerBody[i].transform.eulerAngles = lastBodyRotations[i - 1];
+            }
+            else
+            {
+                playerBody[i].transform.eulerAngles = new Vector3(
+                    0,
+                    0,
+                    lastBodyRotations[i - 1].z + 180.0f
+                );
+            }
         }
     }
 
@@ -104,13 +118,30 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void ResetToGrid(Quaternion rotation)
+    void ResetToGrid()
     {
         playerBody[0].transform.position = new Vector3(
             Mathf.RoundToInt(playerBody[0].transform.position.x),
             Mathf.RoundToInt(playerBody[0].transform.position.y),
             0.0f
         );
-        playerBody[0].transform.rotation = rotation;
+
+        float r = playerBody[0].transform.eulerAngles.z;
+        if (r >= -45.0f && r < 45.0f)
+        {
+            r = 0;
+        }
+        else if (r >= 45.0f && r < 135.0f)
+        {
+            r = 90;
+        }
+        else if (r >= 135.0f && r < -135.0f)
+        {
+            r = 180;
+        }
+        else if (r >= -135.0f && r < -45.0f)
+        {
+            r = -90;
+        }
     }
 }
