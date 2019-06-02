@@ -20,7 +20,6 @@ public class PlayerScript : MonoBehaviour
     public bool allowedToMove = true;
 
 
-
     void Start()
     {
         currentBatteryLife = maxBatteryLife;
