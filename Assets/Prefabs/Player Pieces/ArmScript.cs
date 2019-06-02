@@ -7,36 +7,45 @@ public class ArmScript : MonoBehaviour
     public OutletType outletType;
     public float rechargeTime;
     public float rechargeTargetTime;
-    GameObject otherPlayer;
+    GameObject otherCollidedObject;
 
     void FixedUpdate()
     {
         if (Time.time >= rechargeTargetTime)
         {
             this.GetComponentInParent<PlayerScript>().allowedToMove = true;
-            otherPlayer.GetComponentInParent<PlayerScript>().allowedToMove = true;
+            if (otherCollidedObject != null) { otherCollidedObject.GetComponentInParent<PlayerScript>().allowedToMove = true; }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        otherCollidedObject = null;
+        
         if (transform.parent.tag == "Active Player Head")
         {
             rechargeTargetTime = rechargeTime + Time.time;
-            otherPlayer = other.gameObject;
+
             switch (other.tag)
             {
                 case "Active Player Head":
                     Debug.Log("Hit a player head");
+                    otherCollidedObject = other.gameObject;
                     this.GetComponentInParent<PlayerScript>().allowedToMove = false;
                     other.GetComponentInParent<PlayerScript>().allowedToMove = false;
                     this.GetComponentInParent<PlayerScript>().PlayerPlugIn();
                     other.GetComponentInParent<PlayerScript>().PlayerPlugIn();
-
                     break;
 
                 case "Outlet":
-                    Debug.Log("Hit an outlet");
+                    Debug.Log(GetComponentInParent<OutletScript>().outletType);
+                    
+                    if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
+                    {
+                        Debug.Log("Hit an outlet");
+                        this.GetComponentInParent<PlayerScript>().allowedToMove = false;
+                        this.GetComponentInParent<PlayerScript>().PlayerPlugIn();
+                    }
                     break;
             }
         }
