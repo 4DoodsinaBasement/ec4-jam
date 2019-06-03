@@ -22,6 +22,7 @@ public class GameMaster : MonoBehaviour
 
     public GameObject bluePlayer, redPlayer;
     public int orbAddAmount = 5;
+    public float playerPauseTime = 1.0f;
 
     PlayerInput blueInput, redInput;
     PlayerScript blueScript, redScript;
