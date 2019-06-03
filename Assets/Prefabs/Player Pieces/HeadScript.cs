@@ -34,11 +34,8 @@ public class HeadScript : MonoBehaviour
 
                 case "Orb":
                     if (CanPickup(other.gameObject))
-                    {
-                        myPlayerScript.playerBodyCount += GameMaster.Instance.orbAddAmount;
-
-                        GameMaster master = GameObject.Find("Game Master").GetComponent<GameMaster>();
-
+                    {   GameMaster master = GameObject.Find("Game Master").GetComponent<GameMaster>();
+                        myPlayerScript.playerBodyCount += master.orbAddAmount;
                         master.FoodCollected(other.GetComponent<OrbScript>().orbColor);
                     }
                     break;

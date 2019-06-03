@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
 
     public float unpauseTime = 0;
 
-
+    GameMaster master; 
     void Start()
     {
         currentBatteryLife = maxBatteryLife;
@@ -31,6 +31,7 @@ public class PlayerScript : MonoBehaviour
         {
             playerBody.Add(child.gameObject);
         }
+        master = GameObject.Find("Game Master").GetComponent<GameMaster>();
     }
     
 
@@ -70,7 +71,7 @@ public class PlayerScript : MonoBehaviour
 
     void PausePlayer()
     {
-        unpauseTime = Time.time + GameMaster.Instance.playerPauseTime;
+        unpauseTime = Time.time + master.playerPauseTime;
     }
 
     void SaveLastLocations()

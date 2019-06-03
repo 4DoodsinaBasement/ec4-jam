@@ -7,19 +7,6 @@ public enum GameColor { Blue, Red }
 
 public class GameMaster : MonoBehaviour
 {
-    #region Singleton
-    private static GameMaster _instance;
-
-    public static GameMaster Instance
-    {
-        get
-        {
-            if (_instance == null) { _instance = new GameMaster(); }
-            return _instance;
-        }
-    }
-    #endregion
-
     public GameObject bluePlayer, redPlayer;
     public int orbAddAmount = 5;
     public List<GameObject> BlueFood = new List<GameObject>();
