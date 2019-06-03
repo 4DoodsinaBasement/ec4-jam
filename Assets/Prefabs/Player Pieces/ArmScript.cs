@@ -38,7 +38,7 @@ public class ArmScript : MonoBehaviour
                     break;
 
                 case "Outlet":
-                    Debug.Log(GetComponentInParent<OutletScript>().outletType);
+                    Debug.Log("Hit an outlet: " + GetComponentInParent<OutletScript>().outletType);
                     
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {
