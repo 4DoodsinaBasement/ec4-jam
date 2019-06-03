@@ -50,7 +50,19 @@ public class ArmScript : MonoBehaviour
                     otherPlayerScript.currentBatteryLife = averagebatterylife;
 
                     break;
-
+                case "Player Head":
+                    PlayerScript OtherPlayerScript = other.GetComponentInParent<PlayerScript>();
+                    otherCollidedObject = other.gameObject;
+                    thisPlayerScript.allowedToMove = false;
+                    OtherPlayerScript.allowedToMove = false;
+                    thisPlayerScript.PlayerPlugIn();   
+                    int Averagebatterylife = (
+                        thisPlayerScript.currentBatteryLife +
+                        OtherPlayerScript.currentBatteryLife
+                    ) * 2;
+                    thisPlayerScript.currentBatteryLife = Averagebatterylife;
+                    OtherPlayerScript.currentBatteryLife = Averagebatterylife;
+                    break;
                 case "Outlet":
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {
