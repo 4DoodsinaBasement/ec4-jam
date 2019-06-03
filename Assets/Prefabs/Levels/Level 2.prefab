@@ -2655,6 +2655,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4738322687134485489, guid: e0521ca75259bc24890163da0a87f211,
+        type: 3}
+      propertyPath: maxBatteryLife
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131511349093742748, guid: e0521ca75259bc24890163da0a87f211,
+        type: 3}
+      propertyPath: maxBatteryLife
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0521ca75259bc24890163da0a87f211, type: 3}
 --- !u!4 &1934905229013529896 stripped
