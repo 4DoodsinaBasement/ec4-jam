@@ -6,8 +6,12 @@ public class HeadScript : MonoBehaviour
     PlayerScript myPlayerScript;
     PlayerScript thisPlayerScript;
 
+    GameMaster master;
+
     void Start()
     {
+        master = GameObject.Find("Game Master").GetComponent<GameMaster>();
+        
         myPlayerScript = GetComponentInParent<PlayerScript>();
         thisPlayerScript = this.GetComponentInParent<PlayerScript>();
     }
@@ -25,31 +29,24 @@ public class HeadScript : MonoBehaviour
             {
 
                 case "Wall":
-                    Debug.Log("Hit a wall");
-                    thisPlayerScript.allowedToMove = false;
-                    // INSERT DEATH
+                    master.LoseGame();
                     break;
 
                 case "Orb":
                     if (CanPickup(other.gameObject))
                     {
-                        Debug.Log("EAT");
                         myPlayerScript.playerBodyCount += GameMaster.Instance.orbAddAmount;
 
                         GameMaster master = GameObject.Find("Game Master").GetComponent<GameMaster>();
 
                         master.FoodCollected(other.GetComponent<OrbScript>().orbColor);
-                        //Destroy(other.gameObject);
                     }
                     break;
 
                 case "Player Body":
-                    Debug.Log("Hit a player body");
-                    thisPlayerScript.allowedToMove = false;
+                    master.LoseGame();
                     break;
             }
-
-
         }
     }
 

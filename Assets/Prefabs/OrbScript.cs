@@ -36,7 +36,6 @@ public class OrbScript : MonoBehaviour
 
     public void EatFood()
     {
-        Debug.Log("5 eat food on orb");
         status = FoodStatus.collected;
         this.GetComponent<SpriteRenderer>().enabled = false;
         this.GetComponent<BoxCollider2D>().enabled = false;

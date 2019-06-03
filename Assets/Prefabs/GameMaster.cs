@@ -31,8 +31,12 @@ public class GameMaster : MonoBehaviour
     public int blueOrbId = 0;
     public int redOrbId = 0;
 
+    public bool gameRunning = true;
+
     void Start()
     {
+        gameRunning = true;
+        
         blueInput = bluePlayer.GetComponent<PlayerInput>();
         redInput = redPlayer.GetComponent<PlayerInput>();
         blueScript = bluePlayer.GetComponent<PlayerScript>();
@@ -50,6 +54,14 @@ public class GameMaster : MonoBehaviour
     public void WinGame()
     {
         Debug.Log("Win game");
+    }
+
+    public void LoseGame()
+    {
+        gameRunning = false;
+        Debug.Log("Lose game");
+        blueScript.allowedToMove = false;
+        redScript.allowedToMove = false;
     }
 
     public bool OrbsCollected()
@@ -75,24 +87,18 @@ public class GameMaster : MonoBehaviour
 
     public void FoodCollected(GameColor color)
     {   
-        Debug.Log( "1");
         if(color == GameColor.Blue)
         {   
-            Debug.Log( "2");
             BlueFood[blueOrbId].GetComponent<OrbScript>().EatFood(); 
             blueOrbId++;
             if (blueOrbId < BlueFood.Count){
-                Debug.Log( "3");
                 BlueFood[blueOrbId].GetComponent<OrbScript>().spawnFood(); 
             }
            
         }
-        Debug.Log( "4");
         if(color == GameColor.Red)
         {   
-            Debug.Log( "5");
             
-            Debug.Log( "6");
             RedFood[redOrbId].GetComponent<OrbScript>().EatFood(); 
 
 

@@ -37,6 +37,7 @@ public class PlayerScript : MonoBehaviour
     public void MovePlayer(Vector2Int moveDirection)
     {
         allowedToMove = (Time.time >= unpauseTime);
+        if (GameObject.Find("Game Master").GetComponent<GameMaster>().gameRunning == false) {allowedToMove = false;}
         
         if (currentBatteryLife > 0)
         {
@@ -69,7 +70,6 @@ public class PlayerScript : MonoBehaviour
 
     void PausePlayer()
     {
-        Debug.Log("Pause player " + playerColor);
         unpauseTime = Time.time + GameMaster.Instance.playerPauseTime;
     }
 

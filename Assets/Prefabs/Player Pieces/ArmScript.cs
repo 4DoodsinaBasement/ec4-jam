@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ArmScript : MonoBehaviour
 {
+    GameMaster master;
+    
     public OutletType outletType;
     public float rechargeTime;
     public float rechargeTargetTime;
     GameObject otherCollidedObject;
 
-    void test()
+    void Start()
     {
-        this.GetComponentInParent<PlayerScript>().allowedToMove = true;
-        if (otherCollidedObject != null) { otherCollidedObject.GetComponentInParent<PlayerScript>().allowedToMove = true; }
+        master =  GameObject.Find("Game Master").GetComponent<GameMaster>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,15 +29,11 @@ public class ArmScript : MonoBehaviour
             switch (other.tag)
             {
                 case "Active Player Head":
-                    // check Win Condition
-                    GameMaster master =  GameObject.Find("Game Master").GetComponent<GameMaster>();
                     if (master.OrbsCollected())
                     {
-                        Debug.Log("Win in arm");
                         master.WinGame();
                     }
 
-                    Debug.Log("Hit a player head");
                     PlayerScript otherPlayerScript = other.GetComponentInParent<PlayerScript>();
                     otherCollidedObject = other.gameObject;
                     thisPlayerScript.allowedToMove = false;
@@ -53,18 +50,14 @@ public class ArmScript : MonoBehaviour
                     break;
 
                 case "Outlet":
-                    Debug.Log("Hit an outlet: " + GetComponentInParent<OutletScript>().outletType);
-                    
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {
-                        Debug.Log("Hit an outlet");
                         thisPlayerScript.PlayerPlugIn();
                         thisPlayerScript.currentBatteryLife = thisPlayerScript.maxBatteryLife;
                     }
                     else
                     {
-                        thisPlayerScript.allowedToMove = false;
-                        // INSERT DEATH
+                        master.LoseGame();
                     }
                     break;
             }
