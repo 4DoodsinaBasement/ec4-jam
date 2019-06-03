@@ -45,7 +45,8 @@ public class ArmScript : MonoBehaviour
                     break;
 
                 case "Outlet":
-
+                    Debug.Log("Hit an outlet: " + GetComponentInParent<OutletScript>().outletType);
+                    
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {
                         Debug.Log("Hit an outlet");
@@ -57,10 +58,6 @@ public class ArmScript : MonoBehaviour
                         thisPlayerScript.allowedToMove = false;
                         // INSERT DEATH
                     }
-                    break;
-
-                case "Player Body":
-                    Debug.Log("Hit a player body");
                     break;
             }
         }
