@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class HeadScript : MonoBehaviour
 {
     PlayerScript myPlayerScript;
@@ -36,7 +35,11 @@ public class HeadScript : MonoBehaviour
                     {
                         Debug.Log("EAT");
                         myPlayerScript.playerBodyCount += GameMaster.Instance.orbAddAmount;
-                        Destroy(other.gameObject);
+
+                        GameMaster master = GameObject.Find("Game Master").GetComponent<GameMaster>();
+
+                        master.FoodCollected(other.GetComponent<OrbScript>().orbColor);
+                        //Destroy(other.gameObject);
                     }
                     break;
 
@@ -45,6 +48,8 @@ public class HeadScript : MonoBehaviour
                     thisPlayerScript.allowedToMove = false;
                     break;
             }
+
+
         }
     }
 

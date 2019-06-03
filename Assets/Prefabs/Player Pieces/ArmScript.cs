@@ -28,6 +28,14 @@ public class ArmScript : MonoBehaviour
             switch (other.tag)
             {
                 case "Active Player Head":
+                    // check Win Condition
+                    GameMaster master =  GameObject.Find("Game Master").GetComponent<GameMaster>();
+                    if (master.OrbsCollected())
+                    {
+                        Debug.Log("Win in arm");
+                        master.WinGame();
+                    }
+
                     Debug.Log("Hit a player head");
                     PlayerScript otherPlayerScript = other.GetComponentInParent<PlayerScript>();
                     otherCollidedObject = other.gameObject;
