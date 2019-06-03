@@ -20,10 +20,7 @@ public class HeadScript : MonoBehaviour
     {
         switch (other.tag)
         {
-            case "Player Body":
-                Debug.Log("Hit a player body");
-                break;
-
+            
             case "Wall":
                 Debug.Log("Hit a wall");
                 break;
