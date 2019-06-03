@@ -557,6 +557,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 310975335541712654, guid: dc30e659554fc0e43a262d37aebf9de0,
+        type: 3}
+      propertyPath: maxBatteryLife
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839834863965197411, guid: dc30e659554fc0e43a262d37aebf9de0,
+        type: 3}
+      propertyPath: maxBatteryLife
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc30e659554fc0e43a262d37aebf9de0, type: 3}
 --- !u!1001 &1733785883
