@@ -9,13 +9,10 @@ public class ArmScript : MonoBehaviour
     public float rechargeTargetTime;
     GameObject otherCollidedObject;
 
-    void FixedUpdate()
+    void test()
     {
-        if (Time.time >= rechargeTargetTime)
-        {
-            this.GetComponentInParent<PlayerScript>().allowedToMove = true;
-            if (otherCollidedObject != null) { otherCollidedObject.GetComponentInParent<PlayerScript>().allowedToMove = true; }
-        }
+        this.GetComponentInParent<PlayerScript>().allowedToMove = true;
+        if (otherCollidedObject != null) { otherCollidedObject.GetComponentInParent<PlayerScript>().allowedToMove = true; }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -48,15 +45,22 @@ public class ArmScript : MonoBehaviour
                     break;
 
                 case "Outlet":
-                    Debug.Log(GetComponentInParent<OutletScript>().outletType);
 
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {
                         Debug.Log("Hit an outlet");
-                        thisPlayerScript.allowedToMove = false;
                         thisPlayerScript.PlayerPlugIn();
                         thisPlayerScript.currentBatteryLife = thisPlayerScript.maxBatteryLife;
                     }
+                    else
+                    {
+                        thisPlayerScript.allowedToMove = false;
+                        // INSERT DEATH
+                    }
+                    break;
+
+                case "Player Body":
+                    Debug.Log("Hit a player body");
                     break;
             }
         }
