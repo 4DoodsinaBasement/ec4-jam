@@ -589,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 5040976336500163411, guid: 770799d9b35c128459fc5aab7d732935,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5929595794406713206, guid: 770799d9b35c128459fc5aab7d732935,
         type: 3}
@@ -720,6 +720,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1934905229013529898, guid: 507eb2da88c989b458d41584031f7d3d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5295352888751008221, guid: 507eb2da88c989b458d41584031f7d3d,
         type: 3}
       propertyPath: maxBatteryLife
@@ -747,7 +752,7 @@ PrefabInstance:
     - target: {fileID: 5040976336500163411, guid: 37284eb7e4c5ae84cadfe794ffe84529,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5929595794406713206, guid: 37284eb7e4c5ae84cadfe794ffe84529,
         type: 3}
