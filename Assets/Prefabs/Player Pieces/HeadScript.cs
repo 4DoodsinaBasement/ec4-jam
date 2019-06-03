@@ -5,37 +5,46 @@ using UnityEngine;
 public class HeadScript : MonoBehaviour
 {
     PlayerScript myPlayerScript;
-    
+    PlayerScript thisPlayerScript;
+
     void Start()
     {
         myPlayerScript = GetComponentInParent<PlayerScript>();
+        thisPlayerScript = this.GetComponentInParent<PlayerScript>();
     }
 
     void Update()
     {
-         
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        switch (other.tag)
+        if (this.tag == "Active Player Head")
         {
-            case "Player Body":
-                Debug.Log("Hit a player body");
-                break;
+            switch (other.tag)
+            {
 
-            case "Wall":
-                Debug.Log("Hit a wall");
-                break;
-                
-            case "Orb":
-                if (CanPickup(other.gameObject))
-                {
-                    Debug.Log("EAT");
-                    myPlayerScript.playerBodyCount += GameMaster.Instance.orbAddAmount;
-                    Destroy(other.gameObject);
-                }
-                break;
+                case "Wall":
+                    Debug.Log("Hit a wall");
+                    thisPlayerScript.allowedToMove = false;
+                    // INSERT DEATH
+                    break;
+
+                case "Orb":
+                    if (CanPickup(other.gameObject))
+                    {
+                        Debug.Log("EAT");
+                        myPlayerScript.playerBodyCount += GameMaster.Instance.orbAddAmount;
+                        Destroy(other.gameObject);
+                    }
+                    break;
+
+                case "Player Body":
+                    Debug.Log("Hit a player body");
+                    thisPlayerScript.allowedToMove = false;
+                    break;
+            }
         }
     }
 
