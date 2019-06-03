@@ -58,10 +58,6 @@ public class ArmScript : MonoBehaviour
                         // INSERT DEATH
                     }
                     break;
-
-                case "Player Body":
-                    Debug.Log("Hit a player body");
-                    break;
             }
         }
     }
