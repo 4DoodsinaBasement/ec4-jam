@@ -41,6 +41,9 @@ public class GameMaster : MonoBehaviour
     public void WinGame()
     {
         Debug.Log("Win game");
+        blueScript.allowedToMove = false;
+        redScript.allowedToMove = false;
+        Debug.Log("---------------------------------------------------------------------------------------------------- End");
     }
 
     public void LoseGame()
@@ -61,7 +64,7 @@ public class GameMaster : MonoBehaviour
             }
         }   
 
-         foreach (GameObject food in RedFood)
+        foreach (GameObject food in RedFood)
         {
             if(food.GetComponent<OrbScript>().status != OrbScript.FoodStatus.collected)
             {

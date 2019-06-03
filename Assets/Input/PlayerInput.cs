@@ -60,9 +60,27 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    public void ReversePlayerDirection()
+    public void SetPlayerDirection(Vector3 tailRotation)
     {
-        inputDirection.x = -inputDirection.x;
-        inputDirection.y = -inputDirection.y;
+        Vector2Int newMoveDirection = new Vector2Int();
+        
+        if (tailRotation.z >= -5 && tailRotation.z <= 5)
+        {
+            newMoveDirection = new Vector2Int(0,1);
+        }
+        if (tailRotation.z >= 85 && tailRotation.z <= 95)
+        {
+            newMoveDirection = new Vector2Int(-1,0);
+        }
+        if (tailRotation.z >= 175 && tailRotation.z <= 185)
+        {
+            newMoveDirection = new Vector2Int(0,-1);
+        }
+        if (tailRotation.z >= 265 && tailRotation.z <= 275)
+        {
+            newMoveDirection = new Vector2Int(1,0);
+        }
+        inputDirection.x = newMoveDirection.x;
+        inputDirection.y = newMoveDirection.y;
     }
 }

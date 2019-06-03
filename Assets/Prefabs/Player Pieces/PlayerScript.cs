@@ -69,8 +69,9 @@ public float PowerInt;
         playerBody[0].tag = "Player Head";
         playerBody[playerBody.Count - 1].tag = "Active Player Head";
         playerBody.Reverse();
-        playerInput.ReversePlayerDirection();
         SaveLastLocations();
+        playerInput.SetPlayerDirection(lastBodyRotations[0]);
+        // SaveLastLocations();
     }
 
     void PausePlayer()

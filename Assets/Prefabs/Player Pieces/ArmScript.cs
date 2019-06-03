@@ -18,6 +18,7 @@ public class ArmScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("I hit " + other.gameObject.name);
         PlayerScript thisPlayerScript = this.GetComponentInParent<PlayerScript>();
 
         otherCollidedObject = null;
@@ -29,6 +30,7 @@ public class ArmScript : MonoBehaviour
             switch (other.tag)
             {
                 case "Active Player Head":
+                    Debug.Log("We were supposed to win: " + master.OrbsCollected());
                     if (master.OrbsCollected())
                     {
                         master.WinGame();
