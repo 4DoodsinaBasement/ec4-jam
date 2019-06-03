@@ -1171,6 +1171,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4948618133041746920, guid: 0e3a33729c4423741bdafc58cbe9b1af,
+        type: 3}
+      propertyPath: BatteryObject
+      value: 
+      objectReference: {fileID: 4444777994896011875}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3a33729c4423741bdafc58cbe9b1af, type: 3}
 --- !u!4 &7131511349093742749 stripped
@@ -1252,6 +1257,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8010529319426256875, guid: 6c9eba4d8ebf7994a97dce5706aa9506,
+        type: 3}
+      propertyPath: BatteryObject
+      value: 
+      objectReference: {fileID: 6845957213047299195}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c9eba4d8ebf7994a97dce5706aa9506, type: 3}
 --- !u!4 &4738322687134485490 stripped
