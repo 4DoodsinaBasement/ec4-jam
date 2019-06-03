@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour
     public void MovePlayer(Vector2Int moveDirection)
     {
         allowedToMove = (Time.time >= unpauseTime);
-        if (GameObject.Find("Game Master").GetComponent<GameMaster>().gameRunning == false) {allowedToMove = false;}
+        if (master.gameRunning == false) {allowedToMove = false;}
         
         if (currentBatteryLife > 0)
         {
