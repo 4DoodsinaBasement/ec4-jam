@@ -24,6 +24,7 @@ public class GameMaster : MonoBehaviour
     public int orbAddAmount = 5;
     public List<GameObject> BlueFood = new List<GameObject>();
     public List<GameObject> RedFood = new List<GameObject>();
+    public float playerPauseTime = 1.0f;
 
     PlayerInput blueInput, redInput;
     PlayerScript blueScript, redScript;

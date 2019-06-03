@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour
     public int playerBodyCount = 6;
     public bool allowedToMove = true;
 
+    public float unpauseTime = 0;
 
 
     void Start()
@@ -31,9 +32,12 @@ public class PlayerScript : MonoBehaviour
             playerBody.Add(child.gameObject);
         }
     }
+    
 
     public void MovePlayer(Vector2Int moveDirection)
     {
+        allowedToMove = (Time.time >= unpauseTime);
+        
         if (currentBatteryLife > 0)
         {
             currentBatteryLife--;
@@ -54,11 +58,19 @@ public class PlayerScript : MonoBehaviour
 
     public void PlayerPlugIn()
     {
+        PausePlayer();
+        
         playerBody[0].tag = "Player Head";
         playerBody[playerBody.Count - 1].tag = "Active Player Head";
         playerBody.Reverse();
         playerInput.ReversePlayerDirection();
         SaveLastLocations();
+    }
+
+    void PausePlayer()
+    {
+        Debug.Log("Pause player " + playerColor);
+        unpauseTime = Time.time + GameMaster.Instance.playerPauseTime;
     }
 
     void SaveLastLocations()
