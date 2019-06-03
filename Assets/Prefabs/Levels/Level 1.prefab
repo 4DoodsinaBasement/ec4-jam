@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572230204772468576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1201299527381296060}
@@ -3181,6 +3181,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7404095616571818629}
     m_Modifications:
+    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
+        type: 3}
+      propertyPath: m_Name
+      value: Wall Corner (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 4546712476730056868, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3235,11 +3240,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
-        type: 3}
-      propertyPath: m_Name
-      value: Wall Corner (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4cfc0d3cd32f244a43c63322306bf1, type: 3}
@@ -4093,6 +4093,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7404095616571818629}
     m_Modifications:
+    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
+        type: 3}
+      propertyPath: m_Name
+      value: Wall Corner (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4546712476730056868, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4147,11 +4152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
-        type: 3}
-      propertyPath: m_Name
-      value: Wall Corner (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4cfc0d3cd32f244a43c63322306bf1, type: 3}
@@ -7549,6 +7549,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7404095616571818629}
     m_Modifications:
+    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
+        type: 3}
+      propertyPath: m_Name
+      value: Wall Corner (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 4546712476730056868, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7603,11 +7608,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
-        type: 3}
-      propertyPath: m_Name
-      value: Wall Corner (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4cfc0d3cd32f244a43c63322306bf1, type: 3}
@@ -11836,6 +11836,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7404095616571818629}
     m_Modifications:
+    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
+        type: 3}
+      propertyPath: m_Name
+      value: Wall Corner (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4546712476730056868, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11890,11 +11895,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4546712476730056865, guid: 0f4cfc0d3cd32f244a43c63322306bf1,
-        type: 3}
-      propertyPath: m_Name
-      value: Wall Corner (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4cfc0d3cd32f244a43c63322306bf1, type: 3}

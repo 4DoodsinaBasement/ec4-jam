@@ -84,7 +84,7 @@ public class GameMaster : MonoBehaviour
            
         }
 
-        
+
         if(color == GameColor.Red)
         {   
             

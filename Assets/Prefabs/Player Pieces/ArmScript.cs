@@ -43,7 +43,7 @@ public class ArmScript : MonoBehaviour
                     int averagebatterylife = (
                         thisPlayerScript.currentBatteryLife +
                         otherPlayerScript.currentBatteryLife
-                        ) / 2;
+                    ) * 2;
                     thisPlayerScript.currentBatteryLife = averagebatterylife;
                     otherPlayerScript.currentBatteryLife = averagebatterylife;
 

@@ -21,6 +21,10 @@ public class PlayerScript : MonoBehaviour
 
     public float unpauseTime = 0;
 
+
+    public GameObject BatteryObject;
+
+public float PowerInt;
     GameMaster master; 
     void Start()
     {
@@ -43,7 +47,7 @@ public class PlayerScript : MonoBehaviour
         if (currentBatteryLife > 0)
         {
             currentBatteryLife--;
-
+            updateBlueBattery();
             ResetToGrid();
 
             if (allowedToMove)
@@ -166,5 +170,73 @@ public class PlayerScript : MonoBehaviour
         {
             r = -90;
         }
+    }
+
+    void updateBlueBattery()
+        {
+
+        List<SpriteRenderer> cells = new List<SpriteRenderer>();
+        foreach (Transform child in BatteryObject.transform)
+         {
+            cells.Add(child.gameObject.GetComponent<SpriteRenderer>());
+         }
+
+        int Powerincrement = (maxBatteryLife / 5);
+        int CurrentPower = currentBatteryLife;
+
+        PowerInt = CurrentPower/Powerincrement;
+        
+        if (PowerInt >= 4)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = false;
+            cells[2].enabled = false;
+            cells[3].enabled = false;
+            cells[4].enabled = true;
+        }
+        else if (PowerInt >= 3)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = false;
+            cells[2].enabled = false;
+            cells[3].enabled = true;
+            cells[4].enabled = false;
+        }
+
+        else if (PowerInt >= 2)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = false;
+            cells[2].enabled = true;
+            cells[3].enabled = false;
+            cells[4].enabled = false;
+        }
+        else if (PowerInt >= 1)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = true;
+            cells[2].enabled = false;
+            cells[3].enabled = false;
+            cells[4].enabled = false;
+        }
+        else if (PowerInt >= 0 && currentBatteryLife != 0) 
+        {
+            cells[0].enabled = true;
+            cells[1].enabled = false;
+            cells[2].enabled = false;
+            cells[3].enabled = false;
+            cells[4].enabled = false;
+        }
+
+        if (currentBatteryLife == 0)
+        {
+           cells[0].enabled = false;
+           cells[1].enabled = false;
+           cells[2].enabled = false;
+           cells[3].enabled = false;
+           cells[4].enabled = false;
+        }
+
+
     }
 }
