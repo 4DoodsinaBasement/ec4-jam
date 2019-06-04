@@ -29,6 +29,29 @@ public class SceneChange : MonoBehaviour
     {
          SceneManager.LoadScene("LevelOne");
     }
+     public void tolevelTwo()
+    {
+         SceneManager.LoadScene("LevelTwo");
+    }
+    
+     public void tolevelThree()
+    {
+         SceneManager.LoadScene("LevelThree");
+    }
+    
+     public void tolevelFour()
+    {
+         SceneManager.LoadScene("LevelFour");
+    }
+    
+     public void tolevelFive()
+    {
+         SceneManager.LoadScene("LevelFive");
+    }
+    public void tolevelSix()
+    {
+         SceneManager.LoadScene("LevelSix");
+    }
     
     
 }

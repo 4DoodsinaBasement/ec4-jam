@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum OutletType { Male, Female }
 public enum GameColor { Blue, Red }
@@ -43,6 +44,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log("Win game");
         blueScript.allowedToMove = false;
         redScript.allowedToMove = false;
+        SceneManager.LoadScene("WinGame");
         Debug.Log("---------------------------------------------------------------------------------------------------- End");
     }
 
@@ -52,6 +54,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log("Lose game");
         blueScript.allowedToMove = false;
         redScript.allowedToMove = false;
+        SceneManager.LoadScene("EndGame");
     }
 
     public bool OrbsCollected()
