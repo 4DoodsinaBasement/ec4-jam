@@ -60,6 +60,7 @@ public float PowerInt;
 
             ResetToGrid();
         }
+        
     }
 
     public void PlayerPlugIn()
