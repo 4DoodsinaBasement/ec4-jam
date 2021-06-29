@@ -22,6 +22,10 @@ public class PlayerScript : MonoBehaviour
     public float unpauseTime = 0;
 
 
+    public GameObject BatteryObject;
+
+public float PowerInt;
+    GameMaster master; 
     void Start()
     {
         currentBatteryLife = maxBatteryLife;
@@ -31,18 +35,19 @@ public class PlayerScript : MonoBehaviour
         {
             playerBody.Add(child.gameObject);
         }
+        master = GameObject.Find("Game Master").GetComponent<GameMaster>();
     }
     
 
     public void MovePlayer(Vector2Int moveDirection)
     {
         allowedToMove = (Time.time >= unpauseTime);
-        if (GameObject.Find("Game Master").GetComponent<GameMaster>().gameRunning == false) {allowedToMove = false;}
+        if (master.gameRunning == false) {allowedToMove = false;}
         
         if (currentBatteryLife > 0)
         {
             currentBatteryLife--;
-
+            updateBlueBattery();
             ResetToGrid();
 
             if (allowedToMove)
@@ -55,6 +60,7 @@ public class PlayerScript : MonoBehaviour
 
             ResetToGrid();
         }
+        
     }
 
     public void PlayerPlugIn()
@@ -64,13 +70,14 @@ public class PlayerScript : MonoBehaviour
         playerBody[0].tag = "Player Head";
         playerBody[playerBody.Count - 1].tag = "Active Player Head";
         playerBody.Reverse();
-        playerInput.ReversePlayerDirection();
         SaveLastLocations();
+        playerInput.SetPlayerDirection(lastBodyRotations[0]);
+        // SaveLastLocations();
     }
 
     void PausePlayer()
     {
-        unpauseTime = Time.time + GameMaster.Instance.playerPauseTime;
+        unpauseTime = Time.time + master.playerPauseTime;
     }
 
     void SaveLastLocations()
@@ -165,5 +172,73 @@ public class PlayerScript : MonoBehaviour
         {
             r = -90;
         }
+    }
+
+    void updateBlueBattery()
+        {
+
+        List<SpriteRenderer> cells = new List<SpriteRenderer>();
+        foreach (Transform child in BatteryObject.transform)
+         {
+            cells.Add(child.gameObject.GetComponent<SpriteRenderer>());
+         }
+
+        int Powerincrement = (maxBatteryLife / 5);
+        int CurrentPower = currentBatteryLife;
+
+        PowerInt = CurrentPower/Powerincrement;
+        
+        if (PowerInt >= 4)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = false;
+            cells[2].enabled = false;
+            cells[3].enabled = false;
+            cells[4].enabled = true;
+        }
+        else if (PowerInt >= 3)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = false;
+            cells[2].enabled = false;
+            cells[3].enabled = true;
+            cells[4].enabled = false;
+        }
+
+        else if (PowerInt >= 2)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = false;
+            cells[2].enabled = true;
+            cells[3].enabled = false;
+            cells[4].enabled = false;
+        }
+        else if (PowerInt >= 1)
+        {
+            cells[0].enabled = false;
+            cells[1].enabled = true;
+            cells[2].enabled = false;
+            cells[3].enabled = false;
+            cells[4].enabled = false;
+        }
+        else if (PowerInt >= 0 && currentBatteryLife != 0) 
+        {
+            cells[0].enabled = true;
+            cells[1].enabled = false;
+            cells[2].enabled = false;
+            cells[3].enabled = false;
+            cells[4].enabled = false;
+        }
+
+        if (currentBatteryLife == 0)
+        {
+           cells[0].enabled = false;
+           cells[1].enabled = false;
+           cells[2].enabled = false;
+           cells[3].enabled = false;
+           cells[4].enabled = false;
+        }
+
+
     }
 }

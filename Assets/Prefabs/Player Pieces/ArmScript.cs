@@ -18,6 +18,7 @@ public class ArmScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("I hit " + other.gameObject.name);
         PlayerScript thisPlayerScript = this.GetComponentInParent<PlayerScript>();
 
         otherCollidedObject = null;
@@ -29,6 +30,7 @@ public class ArmScript : MonoBehaviour
             switch (other.tag)
             {
                 case "Active Player Head":
+                    Debug.Log("We were supposed to win: " + master.OrbsCollected());
                     if (master.OrbsCollected())
                     {
                         master.WinGame();
@@ -43,12 +45,24 @@ public class ArmScript : MonoBehaviour
                     int averagebatterylife = (
                         thisPlayerScript.currentBatteryLife +
                         otherPlayerScript.currentBatteryLife
-                        ) / 2;
+                    ) * 2;
                     thisPlayerScript.currentBatteryLife = averagebatterylife;
                     otherPlayerScript.currentBatteryLife = averagebatterylife;
 
                     break;
-
+                case "Player Head":
+                    PlayerScript OtherPlayerScript = other.GetComponentInParent<PlayerScript>();
+                    otherCollidedObject = other.gameObject;
+                    thisPlayerScript.allowedToMove = false;
+                    OtherPlayerScript.allowedToMove = false;
+                    thisPlayerScript.PlayerPlugIn();   
+                    int Averagebatterylife = (
+                        thisPlayerScript.currentBatteryLife +
+                        OtherPlayerScript.currentBatteryLife
+                    ) * 2;
+                    thisPlayerScript.currentBatteryLife = Averagebatterylife;
+                    OtherPlayerScript.currentBatteryLife = Averagebatterylife;
+                    break;
                 case "Outlet":
                     if (other.GetComponent<OutletScript>().outletType != GetComponentInParent<OutletScript>().outletType)
                     {

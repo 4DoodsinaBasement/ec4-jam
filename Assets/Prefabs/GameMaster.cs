@@ -1,25 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum OutletType { Male, Female }
 public enum GameColor { Blue, Red }
 
 public class GameMaster : MonoBehaviour
 {
-    #region Singleton
-    private static GameMaster _instance;
-
-    public static GameMaster Instance
-    {
-        get
-        {
-            if (_instance == null) { _instance = new GameMaster(); }
-            return _instance;
-        }
-    }
-    #endregion
-
     public GameObject bluePlayer, redPlayer;
     public int orbAddAmount = 5;
     public List<GameObject> BlueFood = new List<GameObject>();
@@ -54,6 +42,10 @@ public class GameMaster : MonoBehaviour
     public void WinGame()
     {
         Debug.Log("Win game");
+        blueScript.allowedToMove = false;
+        redScript.allowedToMove = false;
+        SceneManager.LoadScene("WinGame");
+        Debug.Log("---------------------------------------------------------------------------------------------------- End");
     }
 
     public void LoseGame()
@@ -62,6 +54,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log("Lose game");
         blueScript.allowedToMove = false;
         redScript.allowedToMove = false;
+        SceneManager.LoadScene("EndGame");
     }
 
     public bool OrbsCollected()
@@ -74,7 +67,7 @@ public class GameMaster : MonoBehaviour
             }
         }   
 
-         foreach (GameObject food in RedFood)
+        foreach (GameObject food in RedFood)
         {
             if(food.GetComponent<OrbScript>().status != OrbScript.FoodStatus.collected)
             {
@@ -96,6 +89,8 @@ public class GameMaster : MonoBehaviour
             }
            
         }
+
+
         if(color == GameColor.Red)
         {   
             

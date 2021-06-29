@@ -27,18 +27,36 @@ public class HeadScript : MonoBehaviour
         {
             switch (other.tag)
             {
+                case "Active Player Head":
+                    Debug.Log("We were supposed to win: " + master.OrbsCollected());
+                    if (master.OrbsCollected())
+                    {
+                        master.WinGame();
+                    }
 
+                    PlayerScript otherPlayerScript = other.GetComponentInParent<PlayerScript>();
+                    thisPlayerScript.allowedToMove = false;
+                    otherPlayerScript.allowedToMove = false;
+                    thisPlayerScript.PlayerPlugIn();
+                    otherPlayerScript.PlayerPlugIn();
+                    int averagebatterylife = (
+                        thisPlayerScript.currentBatteryLife +
+                        otherPlayerScript.currentBatteryLife
+                    ) * 2;
+                    thisPlayerScript.currentBatteryLife = averagebatterylife;
+                    otherPlayerScript.currentBatteryLife = averagebatterylife;
+
+                    break;
+                
+                
                 case "Wall":
                     master.LoseGame();
                     break;
 
                 case "Orb":
                     if (CanPickup(other.gameObject))
-                    {
-                        myPlayerScript.playerBodyCount += GameMaster.Instance.orbAddAmount;
-
-                        GameMaster master = GameObject.Find("Game Master").GetComponent<GameMaster>();
-
+                    {   GameMaster master = GameObject.Find("Game Master").GetComponent<GameMaster>();
+                        myPlayerScript.playerBodyCount += master.orbAddAmount;
                         master.FoodCollected(other.GetComponent<OrbScript>().orbColor);
                     }
                     break;
